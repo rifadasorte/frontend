@@ -20,11 +20,14 @@ export const ContainerDrawItem = styled.div`
 `
 export const  ContainerImage = styled.div`
     width: 100%;
-    height: 400px;
-    overflow-y: scroll;
+    max-height: 400px;
+    overflow: hidden;
 `
 export const Image = styled.img`
     width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
 `
 
 export const GroupDetail = styled.div`
@@ -53,11 +56,11 @@ export const ContainerDrawHistory = styled.div`
 export const ContainerImageHistory = styled.div`
     height: 100%;
     width: 50%;
-    overflow-y: scroll;
 `
 export const ImageHistory = styled.img`
     width: 100%;
     height: 100%;
+    object-fit: cover;
 `
 export const GroupDetailHistory = styled.div`
     display: flex;

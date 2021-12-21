@@ -5,9 +5,7 @@ const DrawItem = ({data}) => {
     
     return (
         <ContainerDrawItem>
-            <ContainerImage>
-                <Image src='https://th.bing.com/th/id/AMMS_00c3d77dcd8ae03c7908a5fb1d6a76b9?pid=ImgDet&rs=1' />
-            </ContainerImage>
+            <Image src='https://th.bing.com/th/id/AMMS_00c3d77dcd8ae03c7908a5fb1d6a76b9?pid=ImgDet&rs=1' />
             <GroupDetail>
                 <Detail>Prêmio: <br/> {data.nome}</Detail>
                 <Detail>Preço: <br/> {data.preco}</Detail>

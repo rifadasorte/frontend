@@ -11,7 +11,9 @@ export const Logo = styled.div`
     text-shadow: -1px 0 #32925F, 0 1px #32925F, 1px 0 #32925F, 0 -1px #32925F;
 `
 export const ContainerHeader = styled.div`
-    display: absolute;
+    display: flex;
+    justify-content: center;
+    align-tems: center;
     position: fixed;
     width: 100vw;
     height: 50px;
@@ -20,7 +22,7 @@ export const ContainerHeader = styled.div`
 
 export const ContainerInner = styled.div`
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     max-width: 900px;
     height: 50px;
