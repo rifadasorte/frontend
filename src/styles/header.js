@@ -15,7 +15,7 @@ export const ContainerHeader = styled.div`
     position: fixed;
     width: 100vw;
     height: 50px;
-    background: #FDB615;
+    background: #06381b;
 `
 
 export const ContainerInner = styled.div`
@@ -24,7 +24,7 @@ export const ContainerInner = styled.div`
     margin: 0 auto;
     max-width: 900px;
     height: 50px;
-    background: #FDB615;
+    background: #06381b;
     alignt-items: center;
     justify-content: space-between;
 `
