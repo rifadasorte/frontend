@@ -40,10 +40,15 @@ export const GroupDetail = styled.div`
 
 export const Detail = styled.div`
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    flex: 1
+    text-align: center;
+    @media screen and (max-width: 400px){
+        font-size: 0.8rem;
+    }
+
 `
 
 export const ContainerDrawHistory = styled.div`
@@ -70,4 +75,15 @@ export const GroupDetailHistory = styled.div`
     padding-left: 10px;
     background: #fff;
     flex: 1;
+`
+
+export const DetailHistory = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    @media screen and (max-width: 400px){
+        font-size: 0.8rem;
+    }
+
 `
