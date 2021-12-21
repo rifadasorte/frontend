@@ -9,6 +9,9 @@ export const ContainerDraw = styled.div`
     margin: 0 auto;
     padding-top: 60px;
     flex: 1;
+    &:last-child{
+        margin-bottom: 15px;
+    }
 `
 export const ContainerDrawItem = styled.div`
     display: flex;
