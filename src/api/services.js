@@ -1,4 +1,4 @@
-import { URL, get_numbers, get_draws, post_register, endpoint_get_token, endpoint_refresh_token } from "../constants/endpoints"
+import { URL, get_numbers, get_draws, post_register, endpoint_get_token, endpoint_refresh_token, set_request } from "../constants/endpoints"
 
 const services = {
     getDraws: async() => {
@@ -95,6 +95,24 @@ const services = {
         localStorage.removeItem('access_betshare')
         localStorage.removeItem('refresh_betshare')
     },
+
+    setRequest: async (access_token, data) => {
+        const request = await fetch(URL+set_request, {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json',
+                'Authorization':`Bearer ${access_token}`
+            },
+            body: JSON.stringify(data)
+        }).then(response => {
+            if(response.status === 200){
+                return {}
+            }else{
+                return response.json()
+            }
+        })
+        return request
+    }
 }
 
 export default services

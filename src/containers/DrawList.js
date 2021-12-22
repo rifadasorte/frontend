@@ -10,7 +10,6 @@ const DrawList = () => {
 
     const [draws, setDraws] = useState([{}])
     const { num } = useContext(NumberContext)
-    console.log(num, num.length)
     useEffect(()=>{
         const getDraws = async () => {
             const request = await services.getDraws()
@@ -22,12 +21,12 @@ const DrawList = () => {
     return (
         <ContainerDraw>
             {draws.map(draw => draw.status === 'ABERTO' ?
-                <DrawItem data={draw} /> :
+                <DrawItem key={draw.id} data={draw} /> :
                 null
             )}
             
             {draws.map(draw => draw.status === 'FECHADO' ?
-                <DrawHistory data={draw}/> :
+                <DrawHistory key={draw.id} data={draw}/> :
                 null
             )}
             {num.length > 0 && <ConfirmScreen data={num} />}

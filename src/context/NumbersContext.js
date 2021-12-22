@@ -13,10 +13,13 @@ export const NumberProvider = ({children}) => {
         setNumbers(numbers.filter(number => number.codigo !== item.codigo))
     }
 
+    const clearItems = () => { setNumbers([])}
+
     const context = {
         num: numbers,
         add: addItem,
         remove: removeItem,
+        clear: clearItems,
     }
 
     return (

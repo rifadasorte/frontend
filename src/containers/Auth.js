@@ -33,7 +33,6 @@ const Auth = () => {
     }
 
     const submitLogin = async () => {
-        console.log('passou')
         if(validators.thereAreNoNull(loginData)){
             const status = await login(loginData.username, loginData.password)
             if(status === 200){

@@ -3,7 +3,7 @@ import AuthContext from '../context/AuthContext'
 import { ContainerHeader, Logo, Link, ContainerInner } from '../styles/header'
 import Auth from './Auth'
 const Header = () => {
-    const { logout, changePageAuth, access_token, pageauth, logged } = useContext(AuthContext)
+    const { logout, changePageAuth, pageauth, logged } = useContext(AuthContext)
 
     return (
         <ContainerHeader>
