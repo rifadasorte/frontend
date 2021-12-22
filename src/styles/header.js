@@ -38,4 +38,5 @@ export const Link = styled.div`
     color: white;
     font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
 `

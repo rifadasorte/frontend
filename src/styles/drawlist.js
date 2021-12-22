@@ -17,6 +17,7 @@ export const ContainerDrawItem = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    cursor: pointer;
 `
 export const  ContainerImage = styled.div`
     width: 100%;

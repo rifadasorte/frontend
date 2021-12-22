@@ -1,0 +1,6 @@
+export const URL = 'http://127.0.01:8000/'
+export const get_draws = 'draw/'
+export const get_numbers = 'draw/numbers/'
+export const post_register = 'draw/auth/'
+export const endpoint_get_token = 'api/token/'
+export const endpoint_refresh_token = 'api/token/refresh/'
