@@ -18,6 +18,7 @@ export const ContainerHeader = styled.div`
     width: 100vw;
     height: 50px;
     background: #06381b;
+    z-index: 100;
 `
 
 export const ContainerInner = styled.div`
