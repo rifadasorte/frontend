@@ -11,7 +11,7 @@ import NumbersContext from '../context/NumbersContext'
 import services from '../api/services'
 
 const ConfirmScreen = ({data, update}) => {
-    const { logged, access_token, changePageAuth } = useContext(AuthContext)
+    const { logged, access_token, changePageAuth, logout } = useContext(AuthContext)
     const { clear } = useContext(NumbersContext)
 
     const handleSubmit = async () => {
@@ -20,8 +20,9 @@ const ConfirmScreen = ({data, update}) => {
             const erro = Object.values(response)
             if(erro.length > 0){
                 alert(erro)
+                logout()
             }else{
-                alert('link de pagamento')
+                alert('Seus número foram reservados. Você receberá o link de pagamento.')
                 clear()
                 update()
             }

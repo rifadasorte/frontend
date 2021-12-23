@@ -106,4 +106,7 @@ export const ClickHere = styled.div`
     border-radius: 10px;
     padding: 5px;
     border: 2px solid green;
+    &:hover{
+        opacity: 0.8;
+    }
 `
