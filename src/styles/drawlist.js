@@ -90,8 +90,8 @@ export const DetailHistory = styled.div`
 `
 
 export const ClickHere = styled.div`
-    width: 20%;
-    height: 10%;
+    width: 180px;
+    height: 90px;
     background: #FFF;
     font-size: 1.1rem;
     font-weight: 600;
@@ -99,8 +99,8 @@ export const ClickHere = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -20%;
-    margin-bottom: 10%;
+    margin-top: -180px;
+    margin-bottom: 90px;
     color: green;
     align-self: center;
     border-radius: 10px;
