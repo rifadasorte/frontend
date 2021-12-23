@@ -109,7 +109,7 @@ const services = {
                 return {}
             }else if(response.status === 401){
                 services.logout()
-                return JSON.stringify({"error": "você precisa estar logado!"})
+                return {"error": "você precisa estar logado!"}
             }else{
                 return response.json()
             }
