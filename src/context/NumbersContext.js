@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-
+import services from '../api/services'
 const NumberContext = createContext()
 
 export const NumberProvider = ({children}) => {
@@ -14,12 +14,18 @@ export const NumberProvider = ({children}) => {
     }
 
     const clearItems = () => { setNumbers([])}
+    
+    const updateList = async (hook, id) => {
+        const num = await services.getNumbers(id)
+        hook(num)
+    }
 
     const context = {
         num: numbers,
         add: addItem,
         remove: removeItem,
-        clear: clearItems,
+        update: updateList,
+        clear: clearItems
     }
 
     return (

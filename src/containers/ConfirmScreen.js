@@ -10,7 +10,7 @@ import AuthContext from '../context/AuthContext'
 import NumbersContext from '../context/NumbersContext'
 import services from '../api/services'
 
-const ConfirmScreen = ({data}) => {
+const ConfirmScreen = ({data, update}) => {
     const { logged, access_token, changePageAuth } = useContext(AuthContext)
     const { clear } = useContext(NumbersContext)
 
@@ -23,6 +23,7 @@ const ConfirmScreen = ({data}) => {
             }else{
                 alert('link de pagamento')
                 clear()
+                update()
             }
         }else{
             alert('Você precisa estar logado!')

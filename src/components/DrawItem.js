@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { ContainerDrawItem, Detail, GroupDetail, Image } from '../styles/drawlist'
 import NumberList from '../containers/NumberList'
 
+
 const DrawItem = ({data}) => {
     const [toggle, setToggle] = useState(false)
-
     return (
         <>
         <ContainerDrawItem onClick={() => setToggle(!toggle)}>

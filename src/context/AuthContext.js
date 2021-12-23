@@ -14,7 +14,10 @@ export const AuthProvider = ({children}) => {
     localStorage.getItem('refresh_betshare') : 
     null)
     const [pageauth, setPageAuth] = useState(false)
-    const [logged, setLogged] = useState(false)
+    const [logged, setLogged] = useState(() => 
+    localStorage.getItem('access_betshare') ? 
+    true : 
+    false)
 
     const Login = async (username, password) => {
         const status = await services.Login(username, password)

@@ -107,6 +107,9 @@ const services = {
         }).then(response => {
             if(response.status === 200){
                 return {}
+            }else if(response.status === 401){
+                services.logout()
+                return JSON.stringify({"error": "você precisa estar logado!"})
             }else{
                 return response.json()
             }

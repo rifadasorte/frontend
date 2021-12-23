@@ -1,16 +1,14 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect, useContext} from 'react'
 import NumberItem from '../components/NumberItem'
 import { ContainerNumberList } from '../styles/numbers'
-import services from '../api/services'
-
+import NumberContext from '../context/NumbersContext'
+import ConfirmScreen from './ConfirmScreen'
 const NumberList = ({id}) => {
     const [numbers, setNumbers] = useState([{}])
+    const { num, update } = useContext(NumberContext)
+
     useEffect(() => {
-        const getNumbers = async () => {
-            const num = await services.getNumbers(id)
-            setNumbers(num)
-        }
-        getNumbers()
+        update(setNumbers, id)
     },[])
 
     return (
@@ -18,6 +16,7 @@ const NumberList = ({id}) => {
             {numbers.map(number => 
                 <NumberItem key={number.codigo} data={number} />    
             )}
+            {num.length > 0 && <ConfirmScreen data={num} update={update(setNumbers, id)}/>}
         </ContainerNumberList>
     )
 }
