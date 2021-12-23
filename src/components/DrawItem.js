@@ -8,7 +8,7 @@ const DrawItem = ({data}) => {
     return (
         <>
         <ContainerDrawItem onClick={() => setToggle(!toggle)}>
-            <Image src='https://th.bing.com/th/id/AMMS_00c3d77dcd8ae03c7908a5fb1d6a76b9?pid=ImgDet&rs=1' />
+            <Image src={data.premio.imagem} />
             <GroupDetail>
                 <Detail>Prêmio: <br/> {data.premio.nome}</Detail>
                 <Detail>Valor do prêmio: <br/> R${data.premio.valor},00</Detail>
