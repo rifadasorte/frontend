@@ -88,3 +88,22 @@ export const DetailHistory = styled.div`
     }
 
 `
+
+export const ClickHere = styled.div`
+    width: 20%;
+    height: 10%;
+    background: #FFF;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20%;
+    margin-bottom: 10%;
+    color: green;
+    align-self: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid green;
+`

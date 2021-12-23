@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ContainerDrawItem, Detail, GroupDetail, Image } from '../styles/drawlist'
+import { ClickHere, ContainerDrawItem, Detail, GroupDetail, Image } from '../styles/drawlist'
 import NumberList from '../containers/NumberList'
 
 
@@ -15,6 +15,9 @@ const DrawItem = ({data}) => {
                 <Detail>Preço da rifa: <br/> R${data.preco_da_rifa},00</Detail>
                 <Detail>Data do sorteio: <br/> {data.data_do_sorteio}</Detail>
             </GroupDetail>
+            {data.status === 'ABERTO' 
+            && !toggle 
+            && <ClickHere>Clique aqui e escolha seus números!</ClickHere>}
         </ContainerDrawItem>
         {toggle && 
             <NumberList id={data.id} />
